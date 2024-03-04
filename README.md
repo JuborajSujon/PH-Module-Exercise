@@ -25,6 +25,7 @@ _Title :_
     - find nullVsUndefined.js
 
 ### _32-3:_ Different Truthy and Falsy values
+
     - check falsy value use not (!) sign
     - check truthy value use not (!!) sign
     - check all kind of data is it truty of falsy
@@ -35,7 +36,7 @@ _Title :_
         4. empty object {}
         5. empty array []
         6. funtion(){}
-    
+
         Falsy - always
         1. false
         2. 0 or -0
@@ -43,4 +44,5 @@ _Title :_
         4. undefined
         5. null
         6. NaN
+        [Truthy and Falsy Value]("https://www.sitepoint.com/javascript-truthy-falsy/")
     - find truthyFalsy.js
