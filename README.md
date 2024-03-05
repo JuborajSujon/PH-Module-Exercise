@@ -4,14 +4,14 @@
 
 এই মাইলস্টোন থেকে তুমি যদি আটটা জিনিস শিখতে চাও তাহলে নিচের এই আটটি জিনিস আরেকবার ভালো করে দেখে নাও-
 
-১. Fetch বা Async Await ইউজ করে API থেকে কিভাবে ডাটা লোড করতে হয়। ডাটা অনেক সময় অনেকভাবে থাকে। সেই ডাটা কোনটা কখন Array কখন অবজেক্ট এর ভিতরে আছে। সেটা বুঝে সেই অনুসারে ডাটা দেখানোর সিস্টেম
-২. Arrow ফাংশন কিভাবে ইউজ করা হয়
-৩. Template String এ ডাইনামিকভাবে কিভাবে ডাটা যোগ করতে হয়
-৪. Map, ForEach, Filter, Find এইগুলা কখন কোনটা ব্যবহার করতে হয়, এদের মধ্যে পার্থক্য কি
-৫. Let, Const, Var এদের মধ্যে ডিফারেন্স কি, কোন কোনটা ইউজ করতে হয়।
-৬. কোনটা দিয়ে Array এর মধ্যে লুপ করতে হয়, কোনটা দিয়ে অবজেক্ট এর মধ্যে লুপ করতে হয়  
-৭. Spread কিভাবে ইউজ করা হয়, স্প্রেড অপারেটর দিয়ে কিভাবে Array কপি করে ফেলে।  
-৮. ES6 এর মধ্যে কিভাবে অবজেক্ট বা Array এর Destructure করে সেটা থেকে ভেরিয়েবল ডিক্লেয়ার করতে হয়।
+1. Fetch বা Async Await ইউজ করে API থেকে কিভাবে ডাটা লোড করতে হয়। ডাটা অনেক সময় অনেকভাবে থাকে। সেই ডাটা কোনটা কখন Array কখন অবজেক্ট এর ভিতরে আছে। সেটা বুঝে সেই অনুসারে ডাটা দেখানোর সিস্টেম
+2. Arrow ফাংশন কিভাবে ইউজ করা হয়
+3. Template String এ ডাইনামিকভাবে কিভাবে ডাটা যোগ করতে হয়
+4. Map, ForEach, Filter, Find এইগুলা কখন কোনটা ব্যবহার করতে হয়, এদের মধ্যে পার্থক্য কি
+5. Let, Const, Var এদের মধ্যে ডিফারেন্স কি, কোন কোনটা ইউজ করতে হয়।
+6. কোনটা দিয়ে Array এর মধ্যে লুপ করতে হয়, কোনটা দিয়ে অবজেক্ট এর মধ্যে লুপ করতে হয়
+7. Spread কিভাবে ইউজ করা হয়, স্প্রেড অপারেটর দিয়ে কিভাবে Array কপি করে ফেলে।
+8. ES6 এর মধ্যে কিভাবে অবজেক্ট বা Array এর Destructure করে সেটা থেকে ভেরিয়েবল ডিক্লেয়ার করতে হয়।
 
 ## Module 32
 
@@ -66,18 +66,30 @@ _Title :_ Bonus - Local Storage
 
 ### _36.6-1:_ Set and Read simple value from loacl storage
 
-    - You can set manually key and value at local storage
-    - You can also interact with javascript
-    - local storage support only string data type for key and value.
-    - If you try to set value by primitive data type but it will storage by string. Convert as like toSting()
-    > method:
-        localStorage.getItem("key") -- to get data
-        localStorage.setItem("key", value) -- to set data
-        localStorage.removeItem("key") -- to remove data
-        localStorage.clear() -- clear storage
+- You can set manually key and value at local storage
+- You can also interact with javascript
+- local storage support only string data type for key and value.
+- If you try to set value by primitive data type but it will storage by string. Convert as like toSting()
 
+**method:**
+
+1. localStorage.getItem("key") -- to get data
+2. localStorage.setItem("key", value) -- to set data
+3. localStorage.removeItem("key") -- to remove data
+4. localStorage.clear() -- clear storage
+
+- work file: setReaddataLocalStorage.js
 
 ### _36.6-2:_ How to set and get objects to local storage
+
+- If you work with object , then you have to use
+
+  - JSON stringify to convert object to string and
+  - JSON parse to convert string to objcet
+  - You can use inside the function
+  - some time you may see window.localStorage because localStorage it window object
+
+- work file: setReaddataLocalStorage.js
 
 ### _36.6-3:_ A simple shopping cart to add product and quantity
 
