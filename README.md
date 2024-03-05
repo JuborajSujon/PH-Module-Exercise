@@ -93,6 +93,14 @@ _Title :_ Bonus - Local Storage
 
 ### _36.6-3:_ A simple shopping cart to add product and quantity
 
+    - make simple data to add product and quantity
+    - find commit simple shopping cart to add product and quantity
+    - work file: project shopping Cart
+
 ### _36.6-4:_ (Advanced) Loacal Storage interactions for a shopping cart
+
+    - make object data to add product and quantity
+    - find commit local storage interactions for a shopping cart
+    - work file: project shopping Cart
 
 ### _36.6-5:_ React JS installation with vite
