@@ -104,3 +104,9 @@ _Title :_ Bonus - Local Storage
     - work file: project shopping Cart
 
 ### _36.6-5:_ React JS installation with vite
+
+    ```code
+    npm create vite@latest my-first-react -- --template react
+    ```
+
+### _36.6-reward 1:_ Pass by reference and pass by value
