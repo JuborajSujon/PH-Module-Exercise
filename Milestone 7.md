@@ -31,3 +31,4 @@ _37-1:_ Javascript you need to know for react
 _37-2:_ Template literals, Arrow function , spread operator
 _37-3:_ Array Methods (Map, ForEach, Filter And Find )
 _37-4:_ Array And Object Destructuring
+_37-5:_ JSON, Fetch, Keys, Values, Array Add Or Remove Using Dots
