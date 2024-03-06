@@ -28,3 +28,5 @@ _2nd module_ - React Core concepts (part 1)
 _Title:_ Javascript you need to know for react
 
 _37-1:_ Javascript you need to know for react
+_37-2:_ Template literals, Arrow function , spread operator
+_37-3:_ Array Methods (Map, ForEach, Filter And Find )
