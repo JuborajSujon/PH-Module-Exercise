@@ -5,6 +5,14 @@ name = "Jane";
 console.log(name, name2); // Jane John
 // here are not effect to each other
 
+function increment(num) {
+  num++;
+}
+
+let x = 10;
+increment(x);
+console.log(x); // Output: 10 (unchanged)
+
 // senario - passing reference at non-privitive data
 let person = { name: "John", age: 20 };
 let person2 = person; // memory address reference of person object
@@ -18,6 +26,14 @@ function test(v) {
 }
 
 console.log(test(person)); // { name: "Jason", age: 20 }
+
+function changeArray(arr) {
+  arr.push(4);
+}
+
+let arr = [1, 2, 3];
+changeArray(arr);
+console.log(arr); // Output: [1, 2, 3, 4] (changed)
 
 // solve this problem
 const person3 = structuredClone(person);
