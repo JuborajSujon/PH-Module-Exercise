@@ -32,7 +32,8 @@ _Title :_ Understand Common JavaScript Concepts
 
 - Typed language
 - primitive and non-primitive
-- find primitiveNonprimitive.js
+
+_work file:_ primitiveNonprimitive.js
 
 ### _32-2:_ Null vs Undefined , different ways you will get undefined
 
@@ -47,7 +48,7 @@ _8 ways to get undefined_
 7. When array element delete explicitly inside - using delete operator ,if needed to delete use splice method
 8. Set a value directly to undefined, if needed to assign use null
 
-- find nullVsUndefined.js
+_work file:_ nullVsUndefined.js
 
 ### _32-3:_ Different Truthy and Falsy values
 
@@ -71,8 +72,23 @@ _8 ways to get undefined_
   4. undefined
   5. null
   6. NaN
-     [Truthy and Falsy Value]("https://www.sitepoint.com/javascript-truthy-falsy/")
 
-- find truthyFalsy.js
+  [Truthy and Falsy Value](https://www.sitepoint.com/javascript-truthy-falsy/)
+
+_work file:_ truthyFalsy.js
 
 ### _32-4:_ Double Equal (==) Vs Triple Equal (===), Implicit Conversion
+
+- types coercion
+  [When All is Not Equal in JavaScript](https://www.sitepoint.com/javascript-truthy-falsy/)
+- non primitive like object or array checked by their reference
+- if you need to compare object or array then under loop check thire element is equal or not
+
+_work file:_ find triple.js
+
+### _32-5_ Block Scope Global Scope Simple Understanding Of Hoisting
+
+- scope
+- hoisting
+
+_work file:_ scope.js , variable.js and variableHoisting.js
