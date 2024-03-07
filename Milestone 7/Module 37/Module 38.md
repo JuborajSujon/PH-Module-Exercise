@@ -169,6 +169,22 @@ History of React
 
 ## _38-3_ - JSX, its rules and add dynamic content to JSX in your first component
 
+### What is JSX?
+
+- JSX is a syntax extension to JavaScript
+- JSX stands for JavaScript XML
+- Lets you write HTML-like markup inside a javaScript file
+- Under the hood it is transformed into regular Javascript using compilers like Bable,TypeScript
+
+### What are the rules?
+
+- JSX must return a single root element
+- JSX must end with a closing tag or Must be self closing
+- Must use camelCase - className, onClick, tabIndex
+- Write expression in curly braces {}
+- Using double curly braces {{}} to pass a object in JSX
+- Using double curly braces {{}} to write css in JSX
+
 ## _38-4_ - Explore JSX and Props basics
 
 ## _38-5_ - Prop types and how to pass/read a prop
