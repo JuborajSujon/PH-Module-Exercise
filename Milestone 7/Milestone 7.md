@@ -17,11 +17,11 @@ _2nd module_ - React Core concepts (part 1)
 - context hooks
 - ref hooks
 - performance hooks
-_4th module_ - Simple React Rest Countries (project)
-_5th module_ - Modules and data storage integration
-_6th module_ - Simple React SPA with scribbles cafe (project)
-_7th module_ - Assignment
-_8th module_ - Bonus Module
+  _4th module_ - Simple React Rest Countries (project)
+  _5th module_ - Modules and data storage integration
+  _6th module_ - Simple React SPA with scribbles cafe (project)
+  _7th module_ - Assignment
+  _8th module_ - Bonus Module
 
 ## Module 37
 
@@ -32,3 +32,5 @@ _37-2:_ Template literals, Arrow function , spread operator
 _37-3:_ Array Methods (Map, ForEach, Filter And Find )
 _37-4:_ Array And Object Destructuring
 _37-5:_ JSON, Fetch, Keys, Values, Array Add Or Remove Using Dots
+_37-6:_ (Advanced) Truthy, Falsy, Ternary Operator, Shortcut And Or
+_37-7:_ Explore Localstorage And Session Storage With JSON
