@@ -34,3 +34,4 @@ _37-4:_ Array And Object Destructuring
 _37-5:_ JSON, Fetch, Keys, Values, Array Add Or Remove Using Dots
 _37-6:_ (Advanced) Truthy, Falsy, Ternary Operator, Shortcut And Or
 _37-7:_ Explore Localstorage And Session Storage With JSON
+_37-8:_ Dot Vs Bracket Notation
