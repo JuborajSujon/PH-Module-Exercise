@@ -43,5 +43,3 @@ myFunction1();
 /**
  * you can access only inside the function block and can't access outside
  */
-
-// hoisting
