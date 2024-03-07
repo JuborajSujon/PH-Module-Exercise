@@ -17,11 +17,11 @@ _2nd module_ - React Core concepts (part 1)
 - context hooks
 - ref hooks
 - performance hooks
-  _4th module_ - Simple React Rest Countries (project)
-  _5th module_ - Modules and data storage integration
-  _6th module_ - Simple React SPA with scribbles cafe (project)
-  _7th module_ - Assignment
-  _8th module_ - Bonus Module
+_4th module_ - Simple React Rest Countries (project)
+_5th module_ - Modules and data storage integration
+_6th module_ - Simple React SPA with scribbles cafe (project)
+_7th module_ - Assignment
+_8th module_ - Bonus Module
 
 ## Module 37
 
