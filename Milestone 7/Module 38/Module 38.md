@@ -187,6 +187,17 @@ History of React
 
 ## _38-4_ - Explore JSX and Props basics
 
+### 3 way to apply css in JSX
+
+1. Using className - import css file and use selector in JSX
+2. Using style object
+3. Using inline style object
+
+### Basic props apply in JSX
+
+1. Set the props as like attributes at component and receive the props as function aguments and pass the props as an object to the function as parameter.
+2. You can destructure the props object when the function parameter define
+
 ## _38-5_ - Prop types and how to pass/read a prop
 
 ## _38-6_ - Read only props Two way of conditional rendering
