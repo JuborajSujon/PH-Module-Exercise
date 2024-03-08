@@ -237,6 +237,26 @@ History of React
 
 ## _38-7_ - Six ways to do Conditional Rendering: If, Ternary and AND OR
 
+### What is Conditional Rendering?
+
+- conditional rendering is the process of displaying different content based on certain conditions or states.
+- It allows you to create dynamic user interfaces that can adapt to changes in data and user interaction.
+- if isDone is true, the component will return nothing null, otherwise it will return the element that was passed to it.
+
+### Whay Conditional Rendering is necessary in react applications
+
+- _improved user experience_ - Conditional rendering allows you to create dynamic user interfaces by showing and hiding content based on the user's state or conditions.
+- _Improved Performance_ - By conditionally rendering content, apps work faster by only showing whats needed and improve the performance of your application.
+- _Simplified Code_ - By using conditional statements you can decided what content should be rendered and you can avoid repeating the same code and create more modular components.
+- _Flexibility_ - by rendering different content based on the application state, you can create components that can be used in different contexts and adapt to different user interactions.
+
+### conditional rendering JSX
+
+- if statements
+- AND operator &&
+- OR operator ||
+- ternary operator ?:
+
 ## _38-8_ - (advanced) Rendering lists of users using map
 
 ## _38-9_ - Module Summary and Recap
