@@ -202,7 +202,38 @@ History of React
 
 ## _38-5_ - Prop types and how to pass/read a prop
 
+- _What are props_ - Props analogy with network, basics about props
+  - React components use props to communicate with each other.
+  - Every parent component can pass some information to its child components by giving them props.
+  - You can pass any JavaScript value through props, including components, objects, arrays and functions.
+- _Pass and Read_ - Pass props to and read props from a component
+  - Pass props to the child component
+  - Read props inside the child component
+- _Ways to read_ - Ways to reading props properties
+  - Way -1 - Destructuring props as object inside function Avatar({src, name}){}
+  - Way -2 - Using props.children inside function
+- _Default value and JSX_ - Default value for prop, props with JSX syntax, JSX as children
+  - Specifying a Default Value for a Prop function Avatar({src = "./name", name = "Carter", children}){}
+- _Value of Props_ - Different types of values of props
+  - string, number, boolean, null, undefined, object, array, function, symbol, bigint
+  - When need to pass dynamic value at assigning props (marks ={80}, func = {myFunction}, object = {{name:"Carter"}})
+- _Forwarding Props_ - Forwarding props with JSX Spread Syntax
+  - Forwarding props with JSX Spread Syntax ({...props}) when send to child component
+  - Or you can use object destructuring inside function ({src, name}){} then pass props as basic props define inside the child component.
+- ## _Passing JSX as Children_ - Passing JSX as children
+
+### Props are outside, States are inside
+
+### Props are Unidirectional data flow system
+
 ## _38-6_ - Read only props Two way of conditional rendering
+
+- import and export file basic syntax
+- conditional rendering with if else with two method
+
+### props are read only, you can't change props object properties value
+
+### if you want to change value you have to pass destructuring it as function parameter, then you can change value
 
 ## _38-7_ - Six ways to do Conditional Rendering: If, Ternary and AND OR
 
