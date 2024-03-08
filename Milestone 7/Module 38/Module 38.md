@@ -197,6 +197,8 @@ History of React
 
 1. Set the props as like attributes at component and receive the props as function aguments and pass the props as an object to the function as parameter.
 2. You can destructure the props object when the function parameter define
+3. You can pass dynamic value at assigning props (marks ={80})
+4. You can set default value for props at function parameter
 
 ## _38-5_ - Prop types and how to pass/read a prop
 
