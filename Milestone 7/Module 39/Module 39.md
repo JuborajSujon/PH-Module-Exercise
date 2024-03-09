@@ -137,6 +137,110 @@ Variable do not preserve data between renders and cannot trigger react to render
 
 ## _39-5_ - (Advanced) Understand the concept of useEffect
 
+### What are Effects?
+
+There are two types of logic inside react components:
+
+- _Rendering code_ - lives at the top level of your component. This is where you take the props and state, transform them, and return the JSX you want to see on the screen.
+- _Event handlers_ - An event handler might update an input field, submit an HTTP POST request by buy a product, or navigate the user to another screen.
+
+Event handlers contain 'side effects' (they changes the program's state) caused by a specific user action (for example, a button click or typing)
+
+Consider a chatroom component that must connect to the chat server whenever it's visible on the secreen.
+
+- Sending a message in the chat is an event because it is directly caused by the user clicking a specific button.
+- However, setting up a server connection is an effect because it should happen no matter which interaction caused the component to appear.
+
+### What are side effects in react?
+
+- not prdictable
+- Actions which are performed with the 'outside world'
+- A side effect is performed when we need to reach outside the scope of our current react components to do something.
+- React component rendering and side effect logic are independent.
+
+### Some common side effects
+
+- Making a request to an API for data from a backend server
+- To interact with browser APIs (that is, to use document or window directly) / manipulating DOM directly
+- Using unpredictable timing functions like setTimeout() or setInterval()
+- Reading data from local storage
+
+### What is useEffect() ?
+
+useEffect exists -
+
+- To synchronize a component with an external system.
+- To provide a way to handle performing these side effects
+- Doesn't affect the rendering or performance of the component that it's in
+- Performs asynchronous tasks, like making requests to an API
+
+### How to write an useEffect() ?
+
+1. _Declare an effect_ - By default, your effect will run after every render
+2. _Specify the effect dependencies_ - Most effects should only re-run when needed rather than after every render. For example, a fade-in animation should only trigger when a component appears.
+3. _Add cleanup if needed_ - Some effects need to specify how to stop, undo or clean up whatever they were doing. For example, 'conncet' needs 'disconnect'.
+
+### Different types of dependencies in useEffect
+
+1. Run after every render
+
+```js
+useEffect(() => {
+  // do something
+});
+```
+
+2. Run only once after the initial render
+
+```js
+useEffect(() => {
+  // do something
+}, []);
+```
+
+3. Run on mount and also if either a or b have changed since the last render
+
+```js
+useEffect(() => {
+  // do something
+}, [a, b]);
+```
+
+### What is the useEffect() cleanup function?
+
+let's look at this scenario:
+
+Imagine the ChatRoom component is a part of a lager application with many different screens. The user starts their jurney on the ChatRoom page. The component mounts. i.e. `appears on the screen for the first time` and calls connection.connect().
+
+Then imagine the user navigates to anoter screen - for example, to the setting page. The ChatRoom component unmounts.
+
+Finally, the user clicks back and ChatRoom mounts again. This would set up a second connection. but the first connection was never destroyed! `As the user navigates the app, The connections would keep piling up.`
+
+To fix this issue, return a cleanup function from useEffect().
+
+```js
+useEffect(() => {
+  const connection = createConnection();
+  connection.connect();
+
+  return () => {
+    connection.disconnect();
+  };
+}, []);
+```
+
+### What is the useEffect() cleanup function?
+
+- The useEffect cleanup allows us to tidy up our code before our component unmounts.
+- When our code runs and returns for every render, useEffect also cleans up after itself using the cleanup function.
+- The cleanup function prevents memory leaks and removes some unnecessary and unwanted behaviours.
+- prevent unwanted behaviours and optimizes application performance
+
+### When should we use the useEffect() cleanup function?
+
+- if our component unmounts before our promise resolves, useEffect will try to update the state (on an unmounted component) and will throw an error.(memory leak)
+  To fix this, we need to return a cleanup function from useEffect.
+
 ## _39-6_ - (Recap) Load dynamic data, API call useEffect integrate state
 
 ## _39-7_ - (Recap) Core Concepts Components, State, useEffect
