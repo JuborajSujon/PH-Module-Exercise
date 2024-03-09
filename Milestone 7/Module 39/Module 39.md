@@ -7,6 +7,8 @@ _React core concept_
 - Components
 - JSX
 - props
+- events
+- state
   new project setup and project file structure overview
 
 ## _39-2_ - Different way to handle events in React
@@ -37,6 +39,15 @@ _By Convention_ - It is common to name event handler as handle followed by the e
 _Reading Props in Event handler_
 
 _Preventing Default Behaviour of Form_
+
+_Recap_
+
+- You can handle events by passing a function as prop to an element like `<button>`
+- Event handlers must be passed, not called
+- You can define an event handler function separately or inline
+- Event handlers are defined inside a component, so they can access props
+- You can declare an event handler in a parent and pass it as prop to a child
+- Explicity calling an event handler prop from a child handler is a good alternative to propagation
 
 ## _39-3_ - A simple Introduction to State change in React
 
