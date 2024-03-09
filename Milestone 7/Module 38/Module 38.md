@@ -259,4 +259,6 @@ History of React
 
 ## _38-8_ - (advanced) Rendering lists of users using map
 
+- rendering list of users using map with array data and object data
+
 ## _38-9_ - Module Summary and Recap
