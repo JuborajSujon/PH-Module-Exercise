@@ -262,3 +262,5 @@ History of React
 - rendering list of users using map with array data and object data
 
 ## _38-9_ - Module Summary and Recap
+
+- rendering a component to the another component concept
