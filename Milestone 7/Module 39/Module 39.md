@@ -273,8 +273,90 @@ _Re-render when state updates_ :
 - Once the component has been initially rendered, you can trigger further renders by updating its state the set function. updating your component's state automatically queues a render.
 - You can imagine these as a restaurant guest ordering tea, dessert and all sorts of things after puting in their first order, depending on the state of their thirst or hunger.
 
+_Step 2: React renders your components_ :
+
+After your trigger a render, React `calls your component to figure out what to display on the screen`. 'Rendering' is React calling your component.
+
+- On initial render, React will call the root component.
+- For subsequent renders, React will call the function component whose state update triggered the render.
+
+This process is recursive: if the updated component returns some other component, React will render that component next, and if that component also returns some other component, it will render that component next, and so on.
+
+_Step 3: React commits changes to the DOM_ :
+
+After rendering (calling) your components , React will modify the DOM to reflect the changes.
+
+- For the initial render, React will use the `appendChild() DOM API to put all the DOM nodes it has created on the screen.
+- For re-renders, React will apply the minimal necessary operations(claculated while rendering) to make the DOM match the latest rendering output.
+
+React only changes the DOM nodes if there's a different between renders.
+
 ## _39-7_ - (Recap) Core Concepts Components, State, useEffect
 
+### React Core Concepts
+
+- Components
+- JSX
+- props
+- events
+- State
+- useEffect
+
 ## _39-8_ - Thinking in React way
+
+### When you build a user interface with React -
+
+- _Step 1_ - Break it apart into pieces called components
+- _Step 2_ - Describe the different visual states for each of the components
+- _Step 3_ - Connect the components together so that the data flows throught them.
+
+### Start With the Mockup
+
+1. You have already a JSON API
+2. You have a Mockup From Designer
+
+### JSON API
+
+![JSON API](./assets/JSON%20API.png)
+
+### Mockup From Designer
+
+![Mockup Design](./assets/Mockup%20design.png)
+
+#### Step 1 : Break the UI into a component hierarchy
+
+Thing About -
+
+- Programming
+- CSS
+- Design
+
+_Find small component_
+
+![5 Component here](./assets/component5here.png)
+
+#### Step 2 : Build a Static version in React
+
+_Make it Static Version_
+
+![Static Version](./assets/Think%20about%20-%20Static%20version.png)
+
+#### Step 3 : Find the minimal but complete representation of UI state
+
+### Which of these are state?
+
+- Does it `remain unchanged` over time? `if so, it isn't state`.
+- Is it `passed in from a parent` via props? `if so, it is state`.
+- `Can you compute it` based on existing state or props in your component? `if so, it definitely isn't state`.
+
+![Search box](./assets/searchbox.png)
+
+#### Step 4 : Identify where your state should live
+
+![State should live here](./assets//state%20live.png)
+
+#### Step : Add inverse data flow
+
+![Add inverse data flow](./assets/inversedataflow.png)
 
 ## _39-9_ - Explore React official documentation
