@@ -243,6 +243,36 @@ useEffect(() => {
 
 ## _39-6_ - (Recap) Load dynamic data, API call useEffect integrate state
 
+### Trigger, render and commit in react
+
+### What does render means?
+
+- Before your components are displayed on screen, they must be rendered by react.
+- "Rendering" means that React is calling your component, which is a function.
+- "Rendering" is the process of converting a component into HTML.
+
+### Understand Trigger, render and commit
+
+Imagin that your component are cooks in the kitchen. In this scenario, React is the waiter who puts in requests from customers and brings them their orders. This process of `requesting` and `serving UI` has three steps:
+
+1. Triggering a render (delivering the guest's order to the kitchen).
+2. Rendering the component (Preparing the order in the kitchen).
+3. Committing to the DOM (Placing the order on the table).
+
+### Step 1 : Trigger a render
+
+There are two reasons for a component to render:
+
+1. It's the component's initial render.
+2. The component's (or one of its ancestors) state has been updated.
+
+_Initial render_ : When your app starts , you need to trigger the initial render. It's done by calling createRoot with the target DOM node, and then calling its render method with your component.
+
+_Re-render when state updates_ :
+
+- Once the component has been initially rendered, you can trigger further renders by updating its state the set function. updating your component's state automatically queues a render.
+- You can imagine these as a restaurant guest ordering tea, dessert and all sorts of things after puting in their first order, depending on the state of their thirst or hunger.
+
 ## _39-7_ - (Recap) Core Concepts Components, State, useEffect
 
 ## _39-8_ - Thinking in React way
