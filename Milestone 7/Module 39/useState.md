@@ -123,3 +123,45 @@ function ArrayExample() {
 
 export default ArrayExample;
 ```
+
+// Implementing an object as a state variable
+
+There are two things you need to keep in mind about updates when using object
+
+- The importance of [immutability](https://blog.logrocket.com/immutability-react-should-you-mutate-objects/).
+- and the fact that the setter return by `useState` doesn't [merge object like](https://legacy.reactjs.org/docs/state-and-lifecycle.html#state-updates-are-merged) `setState()` does in class components.
+
+About the first point, if you use the same value as the current state to update the state (React uses `Object.is()` for comparing), React won't trigger a re-render.
+
+```js
+console.log(Object.is("1", 1)); // Expected output: false
+console.log(Object.is(NaN, NaN)); // Expected output: true
+console.log(Object.is(-0, 0)); // Expected output: false
+const obj = {};
+console.log(Object.is(obj, {})); // Expected output: false
+```
+
+When working with objects, it's easy to make the [following mistake](https://blog.logrocket.com/avoiding-common-mistakes-in-react-hooks/):
+
+```js
+const Message = () => {
+  const [messageObj, setMessage] = useState({ message: "" });
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={messageObj.message}
+        placeholder="Enter a message"
+        onChange={(e) => {
+          messageObj.message = e.target.value;
+          setMessage(messageObj); // Doesn't work
+        }}
+      />
+      <p>
+        <strong>{messageObj.message}</strong>
+      </p>
+    </div>
+  );
+};
+```
