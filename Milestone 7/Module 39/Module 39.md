@@ -360,3 +360,11 @@ _Make it Static Version_
 ![Add inverse data flow](./assets/inversedataflow.png)
 
 ## _39-9_ - Explore React official documentation
+
+Next one week explore react official documentation read and explore it.
+
+## Reward 3
+
+- Why useState instead of variable?
+- Intro to useEffect
+- doc file - [About useState](https://crackerz.programming-hero.com/v2/blog/65e1b5fdc7258c001c20f98b)
