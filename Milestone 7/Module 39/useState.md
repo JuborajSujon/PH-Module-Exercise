@@ -181,4 +181,66 @@ const [messageObj, setMessage] = useState({ message: "", id: 1 });
 
 And we only update the message property like in the above example, React will replace the original { message: '', id: 1 } state object with the object used in the onChange event, which only contains the message property:
 
-{ message: ‘message entered’ } // id property is lost
+`{ message: ‘message entered’ } // id property is lost`
+
+You can replicate the behavior of setState() by using the function argument that contains the object to be replaced and the object spread syntax:
+
+```js
+onChange={e => {
+  const val = e.target.value;
+  setMessage(prevState => {
+    return { ...prevState, message: val }
+  });
+}}
+```
+
+The ...prevState part will get all of the properties of the object, and the message: val part will overwrite the message property. This will have the same result as using Object.assign() (just remember to create a new object):
+
+```js
+onChange={e => {
+  const val = e.target.value;
+  setMessage(prevState => {
+    return Object.assign({}, prevState, { message: val });
+  });
+}}
+```
+
+However, the spread syntax simplifies this operation, and it also works with arrays. Basically, when applied to an array, the spread syntax removes the brackets so you can create another one with the values of the original array
+
+## How to update state in a nested object in react with
+
+In JavaScript, multi-dimensional arrays are arrays within arrays
+
+```js
+[
+  ["value1", "value2"],
+  ["value3", "value4"],
+];
+```
+
+You could use them to group all your state variables in one place. However, for that purpose, it would be better to use nested objects like this
+
+```js
+{
+  'row1' : {
+    'key1' : 'value1',
+    'key2' : 'value2'
+  },
+  'row2' : {
+    'key3' : 'value3',
+    'key4' : 'value4'
+  }
+}
+```
+
+But, the problem when working with multi-dimensional arrays and nested objects is that Object.assign and the spread syntax will create a [shallow copy](https://blog.logrocket.com/copy-objects-in-javascript-complete-guide/#shallow-copy:~:text=Structured%20cloning-,Shallow%20copy,-A%20shallow%20copy) instead of a [deep copy](https://blog.logrocket.com/copy-objects-in-javascript-complete-guide/#shallow-copy:~:text=disrupt%20our%20program.-,Deep%20copy,-A%20deep%20copy).
+
+Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multi-dimensional arrays, as the following example shows. (The same is true with Object.assign() and spread syntax.)
+
+```js
+const arr = [
+  [1, 2],
+  [3, 4],
+];
+const arrCopy = [...arr];
+```
