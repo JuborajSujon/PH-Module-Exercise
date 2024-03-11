@@ -244,3 +244,109 @@ const arr = [
 ];
 const arrCopy = [...arr];
 ```
+
+This [Stack Overflow query](https://stackoverflow.com/questions/43421704/why-is-a-spread-element-unsuitable-for-copying-multidimensional-arrays) offers good explanations for the above example, but the important point is that when using nested objects, we can’t just use the spread syntax to update the state object. For example, consider the following state object:
+
+```js
+const [messageObj, setMessage] = useState({
+  author: "",
+  message: {
+    id: 1,
+    text: "",
+  },
+});
+```
+
+To properly update the text field, we have to copy to a new object the entire set of fields/nested objects of the original object:
+
+```js
+// Correct
+setMessage((prevState) => ({
+  ...prevState, // copy all other field/objects
+  message: {
+    // recreate the object that contains the field to update
+    ...prevState.message, // copy all the fields of the object
+    text: "My message", // overwrite the value of the field to update
+  },
+}));
+```
+
+In the same way, here’s how you’d update the author field of the state object:
+
+```js
+// Correct
+setMessage((prevState) => ({
+  author: "Joe", // overwrite the value of the field to update
+  ...prevState.message, // copy all other field/objects
+}));
+```
+
+However, this is assuming the message object doesn’t change. If it does change, you’d have to update the object this way:
+
+```js
+// Correct
+setMessage((prevState) => ({
+  author: "Joe", // update the value of the field
+  message: {
+    // recreate the object that contains the field to update
+    ...prevState.message, // copy all the fields of the object
+    text: "My message", // overwrite the value of the field to update
+  },
+}));
+```
+
+Working with multiple state variables or one state object
+When working with multiple fields or values as the state of your application, you have the option of organizing the state using multiple state variables:
+
+```js
+const [id, setId] = useState(-1);
+const [message, setMessage] = useState('');
+const [author, setAuthor] = useState('');
+Or an object state variable:
+const [messageObj, setMessage] = useState({
+  id: 1,
+  message: '',
+  author: ''
+});
+```
+
+However, you have to be careful when using state objects with a complex structure (nested objects). Consider this example:
+
+```js
+const [messageObj, setMessage] = useState({
+  input: {
+    author: {
+      id: -1,
+      author: {
+        fName: "",
+        lName: "",
+      },
+    },
+    message: {
+      id: -1,
+      text: "",
+      date: now(),
+    },
+  },
+});
+```
+
+If you have to update a specific field nested deep in the object, you’ll have to copy all the other objects along with the key-value pairs of the object that contains that specific field:
+
+```js
+setMessage((prevState) => ({
+  input: {
+    ...prevState.input,
+    message: {
+      ...prevState.input.message,
+      text: "My message",
+    },
+  },
+}));
+```
+
+In some cases, cloning deeply nested objects can be expensive because React may re-render parts of your applications that depend on fields that haven’t even changed.
+
+For this reason, the first thing you need to consider is trying to flatten your state object(s). In particular, the React documentation recommends splitting the state into multiple state variables based on which values tend to change together.
+
+If this is not possible, the recommendation is to use libraries that help you work with immutable objects, such as immutable.js or immer.
