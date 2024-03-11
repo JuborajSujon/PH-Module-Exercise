@@ -164,4 +164,21 @@ const Message = () => {
     </div>
   );
 };
+
+onChange={e => {
+          const newMessageObj = { message: e.target.value };
+          setMessage(newMessageObj); // now it work
+        }}
 ```
+
+Instead of creating a new object, the above example mutates the existing state object. To React, that’s the same object. To make it work, we must create a new object, just like we discussed earlier
+
+if we add another property to the message object (id)
+
+```js
+const [messageObj, setMessage] = useState({ message: "", id: 1 });
+```
+
+And we only update the message property like in the above example, React will replace the original { message: '', id: 1 } state object with the object used in the onChange event, which only contains the message property:
+
+{ message: ‘message entered’ } // id property is lost
