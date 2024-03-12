@@ -125,3 +125,5 @@ exports.subtract = (a, b) => a - b;
 ```
 
 it is discourage we to use just exports and always stick to module.exports, Why is it to use module.exports instead of just exports ?
+
+[Module.Exports vs Exprots](./module.exports%20vs%20exports.md)
