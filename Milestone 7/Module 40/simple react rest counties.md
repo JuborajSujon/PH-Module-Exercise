@@ -23,3 +23,5 @@ Project name: react-world-tour
 ## 40-8: - (Optional) Prop drilling, pass props in multi level
 
 ## 40-9: - Deploy rest countries to surge or netlify
+
+## Bonus: - props drilling and lift state up
