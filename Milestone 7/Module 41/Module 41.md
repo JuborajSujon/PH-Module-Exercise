@@ -26,6 +26,27 @@ find module directory - you can find common js and es6 modules
 
 ## 41-3: - Create and Load Fake data, chaptgpt json, online api
 
+There are many ways to do this make backend data
+
+1. Client side data - When you need to load data from server but you backend data yet not ready then --
+
+- You can use fake data
+
+2. API
+
+- make an array of object inside the project function and load it
+- make by json data by json generator and create json file in your project
+- make by json data by chatgpt and create json file in your project
+- make by json data using github repository
+- Free open api - github repo/public api
+- Free mock api - Beeceptor
+
+3. Swagger
+
+- make by json data
+
+4. Actual data
+
 ## 41-4: - (Recap) Load Bottles Data and show in grid layout
 
 ## 41-5: - (Recap) Create Shopping Cart to handle Event with parameters
