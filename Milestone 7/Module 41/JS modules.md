@@ -65,6 +65,8 @@ console.log(sum); // Output: 15
 
 4. `Wrapper Module`
 
+[module wrapper](./module%20wrapper.md)
+
 - Every module in node.js gets wrapped in an IIFE function before being loaded
 - IIFE helps keep top level variables scoped to the module rather than the the global scope
 - The IIFE that wraps every module contains 5 parameters - exports, require, module, **filename, and **dirname which are pretty important for the functioning of a module
@@ -81,6 +83,8 @@ console.log(sum); // Output: 15
 ```
 
 5. `Caching Module` - File output here
+
+[Module Caching]()
 
 - Node.js implements a module caching mechanism to improve performance by caching the result of require() calls.
 - When a module is required for the first time, its contents are loaded and executed, and the result is cached in memory.
