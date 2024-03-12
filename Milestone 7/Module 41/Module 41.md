@@ -49,7 +49,23 @@ There are many ways to do this make backend data
 
 ## 41-4: - (Recap) Load Bottles Data and show in grid layout
 
+Work file : Home Work -> Milestone 7 -> es6 modules overview
+
 ## 41-5: - (Recap) Create Shopping Cart to handle Event with parameters
+
+Work file : Home Work -> Milestone 7 -> es6 modules overview
+
+- Your shopping cart data can store
+
+  - Database
+  - Browser
+    - Local Storage
+    - Session Storage
+    - Cookie
+    - IndexedDB
+
+- When should i use local storage or session storage?
+-
 
 ## 41-6: - [optional] Intro to Local storage to store data just one item
 
