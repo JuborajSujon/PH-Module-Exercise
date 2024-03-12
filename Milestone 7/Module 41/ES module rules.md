@@ -118,6 +118,34 @@ export const add = (a, b) => a + b;
 export const subtract = (a, b) => a - b;
 ```
 
+# Circular dependencies
+
+Circular dependencies occur when two or more modules depend on each other directly or indirectly. This can lead to issues because one module needs the other to be loaded before it can finish loading itself. Here's an example of a circular dependency:
+
+Module A (moduleA.js)
+
+```js
+import { greet } from "./moduleB";
+
+export function hello() {
+  return `${greet()}, this is Module A`;
+}
+```
+
+Module B (moduleB.js)
+
+```js
+import { hello } from "./moduleA";
+
+export function greet() {
+  return `${hello()}, greetings from Module B`;
+}
+```
+
+In this example, Module A depends on Module B through the greet function, and Module B depends on Module A through the hello function. This creates a circular dependency between the two modules.
+
+When you try to run this code, you may encounter an error like "Maximum call stack size exceeded" or "Circular dependency detected." To avoid circular dependencies, it's essential to refactor your code to remove the dependency loop. One way to do this is by restructuring your modules so that they don't depend on each other directly or by moving shared functionality to a separate module that both modules can import without creating a circular dependency.
+
 # ES Module Summary
 
 - ES Module is the ECMAScript standard for modules in JavaScript.

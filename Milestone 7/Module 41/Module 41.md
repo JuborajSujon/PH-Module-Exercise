@@ -18,7 +18,11 @@ Reduce:
 
 ## 41-1: - 41-1 Module Introduction ES6 Modules simple import, export
 
+find module directory - you can find common js and es6 modules
+
 ## 41-2: - ES6 Modules, import default, relative path
+
+find module directory - you can find common js and es6 modules
 
 ## 41-3: - Create and Load Fake data, chaptgpt json, online api
 
